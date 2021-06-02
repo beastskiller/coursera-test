@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>relative and absolute</title>
+	<style type="text/css">
+		/*
+		1) Relative Positioning: The elements original position is sort of anchored and element never goes out of the flow even after being offset from it's original position.
+		Offsets we can offset the element from it's original position so that it's visibly present at some other position. While staying physically at tbe same position.
+		There are 4 type of offsets top,bottom,left,right.
+		2)Absolute Positioning: When positioning is absolute than the element goes out of its normal document flow. If the element is inside an element whose positioning is set to be relative than offsetting  the parent element will also move all the absolute elements inside it.
+		3)Except the html all elements are default having a static positioning. Onlty html has a default relative positioning.*/
+			*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		h1{
+			margin-bottom: 15px;
+		}
+		div#container{
+			background-color: #00ffff;
+			position: relative;
+			top: 60px;
+		}
+
+		p{
+			width: 50px;
+			height: 50px;
+			border: 1px solid black;
+			margin-bottom: 15px;
+
+		}
+		#p1{
+			background-color: #A52A2A;
+			position: relative;
+			top: 65px;
+			left:65px;
+		}
+		#p2{
+			background-color: #DEB887;
+		}
+		#p3{
+			background-color: #5F9EA0;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		#p4{
+			background-color: #FF7F50;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Positioning elements</h1>
+	<div id="container">
+		<p id="p1"></p>
+		<p id="p2"></p>
+		<p id="p3"></p>
+		<p id="p4"></p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>The Box Model</title>
+	<style type="text/css">
+		/*
+		1)Cumulative Margins: They are added when margins are left and right while when the elements are on vertically than margins collapse and larger margin wins.
+		2)BOX-SIZING helps us to size the element fully so a content say had content width of 300px and padding of 10px border of 5px so box size is actually 300+20+10=330px to afiix that you can put box-sizing: border box; This will adjust the content size so that box size remains 300px.
+		3) The property of box-sizing isn't inherited and hence cant be placed in body or any other tag and expect it to be inherited use *{		} to do so.
+		4)*{} axtually says that select every element and apply the rules inside it so it's not inheritence.
+		5)if you want to reset the default settings of the browser selector than use *{}.
+		5) If height is restricted so that content isnt fitting use overflow u can use hidden to hide the extra data visible to keep it visible and auto to put a scrollbar.
+		*/
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		body{background-color: grey;
+			
+		}
+		#box {
+			background-color: blue;
+			padding: 10px 10px 10px 10px;
+			border: 5px solid black;
+			width:300px;
+			height: 200px;
+			box-sizing: border-box;
+			margin-top: 50px;  
+			overflow: auto;/*box xsizing isnt inherited so cant put in body*/
+			/*use star*/
+		}
+		#content{
+			background-color: #90EE90;//green
+		}
+		h1{
+			margin-bottom: 30px;
+		}
+	</style>
+</head>
+<body>
+<h1>Box Model</h1>
+<div id="box">
+	<div id="content">
+		Box and content model description.
+		this inside a div with id=content and which is child of another div=box.
+		Box and content model description.
+		this inside a div with id=content and which is child of another div=box.Box and content model description.
+		this inside a div with id=content and which is child of another div=box.Box and content model description.
+		this inside a div with id=content and which is child of another div=box.Box and content model description.
+		this inside a div with id=content and which is child of another div=box.Box and content model description.
+		this inside a div with id=content and which is child of another div=box.Box and content model description.
+		this inside a div with id=content and which is child of another div=box.Box and content model description.
+		this inside a div with id=content and which is child of another div=box.
+	</div>
+</div>
+</body>
+</html>

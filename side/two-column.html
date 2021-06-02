@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Two column design</title>
+	<style type="text/css">
+		/*
+	here we are trying to create a two column layout.
+	when we write float left the paragraph are fitted in same line
+	we did width=50% which means each paragraph will occupy 50% of the div which occupy entire browser.
+	here border 1px spoils the whole thing because the width 50% again applies to content so it doesn't work.
+
+
+		}
+		*/
+		*{
+			box-sizing: border-box;
+		}
+
+		p{
+			width: 50%;
+			border: 1px solid black;
+			float: left;
+			padding: 10px;
+
+		}
+		#p1{
+			/*background-color: #A52A2A;*/
+		}
+		#p2{
+			/*background-color: #DEB887;*/
+		}
+		section{
+			clear:left;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Floating elements</h1>
+	<div>
+		<p id="p1">Text inside paragraph 1 Text inside paragraph 1Text inside paragraph 1Text inside paragraph 1Text inside paragraph 1Text inside paragraph 1Text inside paragraph 1Text inside paragraph 1Text inside paragraph 1Text inside paragraph 1Text inside paragraph 1</p>
+		<p id="p2">Text inside paragraph 2Text inside paragraph 2Text inside paragraph 2Text inside paragraph 2Text inside paragraph 2Text inside paragraph 2Text inside paragraph 2Text inside paragraph 2Text inside paragraph 2Text inside paragraph 2Text inside paragraph 2Text inside paragraph 2Text inside paragraph 2</p>
+		<section>This is regular content occuring after the paragraph boxes</section>
+	</div>
+
+</body>
+</html>
